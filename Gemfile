@@ -5,7 +5,7 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
 
 
 # Gems used only for assets and not required
@@ -36,3 +36,34 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "haml-rails"
+gem "simple_form"
+gem "decent_exposure"
+gem "squeel"
+group :assets do
+  gem "bootstrap-sass"
+end
+
+group :development, :test do
+  gem "debugger"
+  gem "sqlite3"
+  gem "rspec-rails"
+  gem "rspec-instafail"
+  gem "database_cleaner"
+  gem "capybara"
+  gem "capybara-webkit"
+  gem "selenium-webdriver"
+  gem "launchy"
+  gem "factory_girl_rails"
+  gem "faker"
+end
+
+group :development do
+  gem "heroku"
+end
+
+group :production do
+  gem "thin"
+  gem "pg"
+end
